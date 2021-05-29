@@ -3,6 +3,8 @@ const isMonotonic = (array: number[]): boolean => {
   for (let i = 1; i < array.length; i++) {
     if (array[i] > array[i - 1]) isNonIncreasing = false
     if (array[i] < array[i - 1]) isNonDecreasing = false
+    
+    if (!isNonIncreasing && !isNonDecreasing) return false
   }
   return isNonIncreasing || isNonDecreasing
 }
